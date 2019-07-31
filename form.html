@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Place Your </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          </div>
+          <div class="modal-body">
+            <form class="border border-light p-5" id="order" name="orderForm">
+              <p class="h4 mb-4 text-center">ORDER FORM</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="Name">Name:</label>
+                  <input type="text" name="Name" id="Name" class="form-control mb-4" placeholder="Name"></div>
+                <div class="col-md-6">
+                  <label for="phone">Phone Number:</label>
+                  <input type="number" name="phone" id="phone" class="form-control mb-4" placeholder="Phone Number"></div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email" class="form-control mb-4" placeholder="Email"></div>
+                <div class="col-md-6"></div>
+              </div>
+
+
+
+
+              <div class="conatiner">
+
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <strong>
+                      <h2>Pizza Size</h2>
+                    </strong>
+                    <br>
+                    <!-- Group of default radios - option 1 -->
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="large" name="size">
+                      <label class="custom-control-label" for="large">Large</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="medium" name="size">
+                      <label class="custom-control-label" for="medium">Medium</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="small" name="size">
+                      <label class="custom-control-label" for="small">Small</label>
+                    </div>
+
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <strong>
+                      <h2>Toppings</h2>
+                    </strong>
+                    <br>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="pepperoni" id="pepperoni">
+                      <label class="custom-control-label" for="pepperoni">Pepperoni</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="mushrooms" id="mushrooms">
+                      <label class="custom-control-label" for="mushrooms">Mushrooms</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="onions" id="onions">
+                      <label class="custom-control-label" for="onions">Onions</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="sausage" id="sausage">
+                      <label class="custom-control-label" for="sausage">Sausage</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="pineapple" id="pineapple">
+                      <label class="custom-control-label" for="pineapple">Pineapple</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="bacon" id="bacon">
+                      <label class="custom-control-label" for="bacon">Bacon</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="extraCheese" id="extraCheese">
+                      <label class="custom-control-label" for="extraCheese">Extra Cheese</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="blackOlives" id="blackOlives">
+                      <label class="custom-control-label" for="blackOlives">Black Olives</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="greenPeppers" id="greenPeppers">
+                      <label class="custom-control-label" for="greenPeppers">Green Peppers</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-4">
+                      <input type="checkbox" class="custom-control-input" name="spinach" id="spinach">
+                      <label class="custom-control-label" for="spinach">Spinach</label>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+                    <strong>
+                      <h2>Crust</h2>
+                    </strong>
+                    <br>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="thin" name="crust">
+                      <label class="custom-control-label" for="thin">Thin</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="thick" name="crust">
+                      <label class="custom-control-label" for="thick">Thick</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="gluten" name="crust">
+                      <label class="custom-control-label" for="gluten">Gluten Free</label>
+                    </div><div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="flat" name="crust">
+                      <label class="custom-control-label" for="flat">Flatbread Crust</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="stuffed" name="crust">
+                      <label class="custom-control-label" for="stuffed">Cheese Stuffed Crust</label>
+                    </div>
+
+                  </div>
+                </div>
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" class="form-control mb-4" placeholder="Quantity">
+                <label for="comment">Comments</label>
+                <textarea class="form-control rounded-0" id="comment" name="comment" rows="3" placeholder="Message"></textarea>
+                <br>
+                <button class="btn btn-info btn-block" type="submit">Submit Order</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basic dropdown -->
+<button class="btn btn-primary dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">Basic dropdown</button>
+
+<div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Separated link</a>
+</div>
+<!-- Basic dropdown -->
+
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+
+</html>
