@@ -22,8 +22,3 @@
   // Initialize maps
   google.maps.event.addDomListener(window, 'load', regular_map);
 </script>
-
-
-
-
-$('.dropdown-toggle').dropdown()

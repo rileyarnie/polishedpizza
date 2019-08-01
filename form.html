@@ -25,6 +25,78 @@
 <body>
 
   <div class="container">
+    <!-- Modal: modalCart -->
+    <!-- Button trigger modal-->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalCart">Proceed To Checkout</button>
+
+<!-- Modal: modalCart -->
+<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Your cart</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product name</th>
+              <th>Price</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Product 1</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Product 2</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Product 3</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Product 4</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr class="total">
+              <th scope="row">5</th>
+              <td>Total</td>
+              <td>400$</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal: modalCart -->
 
     <!-- Trigger the modal with a button -->
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Place Your </button>
@@ -148,7 +220,8 @@
                     <div class="custom-control custom-radio">
                       <input type="radio" class="custom-control-input" id="gluten" name="crust">
                       <label class="custom-control-label" for="gluten">Gluten Free</label>
-                    </div><div class="custom-control custom-radio">
+                    </div>
+                    <div class="custom-control custom-radio">
                       <input type="radio" class="custom-control-input" id="flat" name="crust">
                       <label class="custom-control-label" for="flat">Flatbread Crust</label>
                     </div>
@@ -174,19 +247,434 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
 
-  <!-- Basic dropdown -->
-<button class="btn btn-primary dropdown-toggle mr-4" type="button" data-toggle="dropdown"
-  aria-haspopup="true" aria-expanded="false">Basic dropdown</button>
+  <div class="contianer">
+    <!-- <div class="planel">
+      <div class="row">
+        <div class="col-md-4">
+          <h4><strong>Pizza</strong></h4>
+        </div>
+        <div class="col-md-2">
+          <h4><strong>Size</strong></h4>
+        </div>
+        <div class="col-md-2">
+          <h4><strong>Quantity</strong></h4>
+        </div>
+        <div class="col-md-2">
+          <h4><strong></strong></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza4.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="vegeterianPizza" class="browser-default custom-select">
+            <option selected disabled>Vegeterian Pizza</option>
+            <option value="350">Small @ Kshs 350</option>
+            <option value="550">Medium @ Kshs 550</option>
+            <option value="750">Large @ Kshs 750</option>
+          </select>
+        </div>
+        <div class="col-md-2"> <input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza6.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="pepperoniPizza" class="browser-default custom-select">
+            <option selected disabled>Pepperoni</option>
+            <option value="400">Small @ Kshs. 400</option>
+            <option value="650">Medium @ Kshs. 650 </option>
+            <option value="900">Large @ Kshs. 900</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza7.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="hawaiianPizza" class="browser-default custom-select">
+            <option selected disabled>Hawaiian</option>
+            <option value="500">Small @ Kshs. 500</option>
+            <option value="700">Medium @ Kshs. 700</option>
+            <option value="950">Large @ Ksh. 950</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza8.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="chickenTikka" class="browser-default custom-select">
+            <option selected disabled>Chicken Tikka</option>
+            <option value="450">Small @ Kshs 450</option>
+            <option value="650">Medium @ Kshs 650</option>
+            <option value="900">Large @ Kshs 900</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza10.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="meatDeluxe" class="browser-default custom-select">
+            <option selected disabled>Meat Deluxe</option>
+            <option value="800">Small @ Kshs. 800</option>
+            <option value="1000">Medium @ Kshs. 1000</option>
+            <option value="1300">Large @ Kshs. 1300</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza9.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="classicItalian" class="browser-default custom-select">
+            <option selected disabled>Gourmet Classic Italian</option>
+            <option value="450">Small @ Kshs. 450</option>
+            <option value="600">Medium @ Kshs. 600 </option>
+            <option value="800">Large @ Kshs. 800</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza11.jpg" alt="" class="img-thumbnail img-fluid">
+        </div>
+        <div class="col-md-2">
+          <select id="chickenGarlic" class="browser-default custom-select">
+            <option selected disabled>Gourmet Chicken Garlic</option>
+            <option value="500">500</option>
+            <option value="750">750</option>
+            <option value="950">950</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza12.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="margherita"class="browser-default custom-select">
+            <option selected disabled>Margherita</option>
+            <option value="350">Small @ Kshs. 350</option>
+            <option value="600">Medium @ Kshs. 600</option>
+            <option value="800">Large @ Kshs. 800</option>
+          </select></div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza13.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="special" class="browser-default custom-select">
+            <option selected disabled>House Special</option>
+            <option value="400">Small @ Kshs. 400</option>
+            <option value="650">Medium @ Kshs. 650</option>
+            <option value="900">Large @ Kshs. 900</option>
+          </select></div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza14.jpg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="gourmetVeggie" class="browser-default custom-select">
+            <option selected disabled>Gourmet Veggie</option>
+            <option value="1">Small @ Kshs. 300</option>
+            <option value="2">Medium @ Kshs. 500</option>
+            <option value="3">Large @ Kshs. 800</option>
+          </select>
+        </div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
 
-<div class="dropdown-menu">
-  <a class="dropdown-item" href="#">Action</a>
-  <a class="dropdown-item" href="#">Another action</a>
-  <a class="dropdown-item" href="#">Something else here</a>
-  <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">Separated link</a>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza20.jpeg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="sweetPotato" class="browser-default custom-select">
+            <option selected disabled>Sweet Potato, Stilton &  Walnuts Pizza</option>
+            <option value="550">Small @ Kshs. 550</option>
+            <option value="750">Medium @ Kshs. 750</option>
+            <option value="1050">Large @ Kshs. 1050</option>
+          </select></div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="images/pizza18.jpeg" alt="" class="img-thumbnail img-fluid"></div>
+        <div class="col-md-2">
+          <select id="lambPizza" class="browser-default custom-select">
+            <option selected disabled>Lamb Pizza</option>
+            <option value="400">Small @ Kshs. 400</option>
+            <option value="650">Medium @ Kshs. 650</option>
+            <option value="900">Large @ Kshs. 900</option>
+          </select></div>
+        <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+        <div class="col-md-2"><button class="primary"> place order</button></div>
+      </div>
+
+ -->
+
+
+ <div class="planel">
+   <!-- <div class="row">
+     <div class="col-md-4">
+       <h4><strong>Pizza</strong></h4>
+     </div>
+     <div class="col-md-2">
+       <h4><strong>Size</strong></h4>
+     </div>
+     <div class="col-md-2">
+       <h4><strong>Quantity</strong></h4>
+     </div>
+     <div class="col-md-2">
+       <h4><strong></strong></h4>
+     </div>
+   </div> -->
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza4.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="vegeterianPizza" class="browser-default custom-select">
+         <option selected disabled>Vegeterian Pizza</option>
+         <option value="350">Small @ Kshs 350</option>
+         <option value="550">Medium @ Kshs 550</option>
+         <option value="750">Large @ Kshs 750</option>
+       </select>
+     </div>
+     <div class="col-md-2"> <input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza6.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="pepperoniPizza" class="browser-default custom-select">
+         <option selected disabled>Pepperoni</option>
+         <option value="400">Small @ Kshs. 400</option>
+         <option value="650">Medium @ Kshs. 650 </option>
+         <option value="900">Large @ Kshs. 900</option>
+       </select>
+     </div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza7.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="hawaiianPizza" class="browser-default custom-select">
+         <option selected disabled>Hawaiian</option>
+         <option value="500">Small @ Kshs. 500</option>
+         <option value="700">Medium @ Kshs. 700</option>
+         <option value="950">Large @ Ksh. 950</option>
+       </select>
+     </div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza8.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="chickenTikka" class="browser-default custom-select">
+         <option selected disabled>Chicken Tikka</option>
+         <option value="450">Small @ Kshs 450</option>
+         <option value="650">Medium @ Kshs 650</option>
+         <option value="900">Large @ Kshs 900</option>
+       </select>
+     </div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza10.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="meatDeluxe" class="browser-default custom-select">
+         <option selected disabled>Meat Deluxe</option>
+         <option value="800">Small @ Kshs. 800</option>
+         <option value="1000">Medium @ Kshs. 1000</option>
+         <option value="1300">Large @ Kshs. 1300</option>
+       </select>
+     </div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza9.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="classicItalian" class="browser-default custom-select">
+         <option selected disabled>Gourmet Classic Italian</option>
+         <option value="450">Small @ Kshs. 450</option>
+         <option value="600">Medium @ Kshs. 600 </option>
+         <option value="800">Large @ Kshs. 800</option>
+       </select>
+     </div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza11.jpg" alt="" class="img-thumbnail img-fluid">
+     </div>
+     <div class="col-md-2">
+       <select id="chickenGarlic" class="browser-default custom-select">
+         <option selected disabled>Gourmet Chicken Garlic</option>
+         <option value="500">500</option>
+         <option value="750">750</option>
+         <option value="950">950</option>
+       </select>
+     </div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza12.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="margherita"class="browser-default custom-select">
+         <option selected disabled>Margherita</option>
+         <option value="350">Small @ Kshs. 350</option>
+         <option value="600">Medium @ Kshs. 600</option>
+         <option value="800">Large @ Kshs. 800</option>
+       </select></div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza13.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="special" class="browser-default custom-select">
+         <option selected disabled>House Special</option>
+         <option value="400">Small @ Kshs. 400</option>
+         <option value="650">Medium @ Kshs. 650</option>
+         <option value="900">Large @ Kshs. 900</option>
+       </select></div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza14.jpg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="gourmetVeggie" class="browser-default custom-select">
+         <option selected disabled>Gourmet Veggie</option>
+         <option value="1">Small @ Kshs. 300</option>
+         <option value="2">Medium @ Kshs. 500</option>
+         <option value="3">Large @ Kshs. 800</option>
+       </select>
+     </div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza20.jpeg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="sweetPotato" class="browser-default custom-select">
+         <option selected disabled>Sweet Potato, Stilton &  Walnuts Pizza</option>
+         <option value="550">Small @ Kshs. 550</option>
+         <option value="750">Medium @ Kshs. 750</option>
+         <option value="1050">Large @ Kshs. 1050</option>
+       </select></div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+   <div class="row">
+     <div class="col-md-4"><img src="images/pizza18.jpeg" alt="" class="img-thumbnail img-fluid"></div>
+     <div class="col-md-2">
+       <select id="lambPizza" class="browser-default custom-select">
+         <option selected disabled>Lamb Pizza</option>
+         <option value="400">Small @ Kshs. 400</option>
+         <option value="650">Medium @ Kshs. 650</option>
+         <option value="900">Large @ Kshs. 900</option>
+       </select></div>
+     <div class="col-md-2"><input type="number" name="quantity" min="1" max="50"></div>
+     <div class="col-md-2"><button class="primary"> place order</button></div>
+   </div>
+
+
+
+    </div>
+
+
+
+    <!-- Button trigger modal-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCart">Launch modal</button>
+
+<!-- Modal: modalCart -->
+<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Your cart</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product name</th>
+              <th>Price</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Product 1</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Product 2</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Product 3</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Product 4</td>
+              <td>100$</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr class="total">
+              <th scope="row">5</th>
+              <td>Total</td>
+              <td>400$</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- Basic dropdown -->
+  </div>
+
+
+
 
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
