@@ -619,6 +619,29 @@
 
 <!--CART -->
 <br>
+<div class="row">
+  <div class="col-md-6">
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" id="userName" class="form-control mb-4" placeholder="Name" required></div>
+  <div class="col-md-6">
+    <label for="phone">Phone Number:</label>
+    <input type="number" name="phone" id="userPhone" class="form-control mb-4" placeholder="Phone Number" required></div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <label for="delivery">Delivery Option:</label>
+
+    <select id="delivery">
+      <option value="pickUp">Pick Up</option>
+      <option value="delivery" id="deliveryOption">Delivery</option>
+
+    </select>
+  </div>
+    <div class="col-md-6 address"  >
+    <label for="address">Delivery Address:</label>
+    <input type="text" id="address" name="phone" class="form-control mb-4" placeholder="Delivery Address" required></div>
+</div>
+
 <div style="overflow-x:auto;">
   <table id="myTable">
 <h3 >YOUR CART<h3>
@@ -641,8 +664,9 @@
   </tr>
 
 </table>
+<br>
 
-<button type="button" name="button" class="btn-primary" id="checkout">Checkout</button>
+<button type="submit" name="button" class="btn-primary" id="checkout">Checkout</button>
 
 </div>
 
@@ -699,19 +723,19 @@
                   <!-- Form contact -->
                   <form class="p-5 grey-text">
                     <div class="md-form form-sm"> <i class="fas fa-user prefix"></i>
-                      <input type="text" id="form3" class="form-control form-control-sm">
+                      <input type="text" id="form3" class="form-control form-control-sm" required>
                       <label for="form3">Your name</label>
                     </div>
-                    <div class="md-form form-sm"> <i class="fas fa-envelope prefix"></i>
-                      <input type="text" id="form2" class="form-control form-control-sm">
+                    <div class="md-form form-sm"> <i class="fas fa-envelope prefix" ></i>
+                      <input type="text" id="form2" class="form-control form-control-sm" required>
                       <label for="form2">Your email</label>
                     </div>
                     <div class="md-form form-sm"> <i class="fas fa-tag prefix"></i>
-                      <input type="text" id="form32" class="form-control form-control-sm">
+                      <input type="text" id="form32" class="form-control form-control-sm" required>
                       <label for="form34">Subject</label>
                     </div>
                     <div class="md-form form-sm"> <i class="fas fa-pencil-alt prefix"></i>
-                      <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+                      <textarea type="text" id="form8" required class="md-textarea form-control form-control-sm" rows="4"></textarea>
                       <label for="form8">Your message</label>
                     </div>
                     <div class="text-center mt-4">
@@ -762,20 +786,20 @@
       <div class="modal-body">
         <form class="border border-light p-5" id="order" name="orderForm">
               <p class="h4 mb-4 text-center">ORDER FORM</p>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-6">
                   <label for="Name">Name:</label>
-                  <input type="text" name="Name" id="Name" class="form-control mb-4" placeholder="Name"></div>
+                  <input type="text" name="Name" id="Name" class="form-control mb-4" placeholder="Name" required></div>
                 <div class="col-md-6">
                   <label for="phone">Phone Number:</label>
-                  <input type="number" name="phone" id="phone" class="form-control mb-4" placeholder="Phone Number"></div>
+                  <input type="number" name="phone" id="phone" class="form-control mb-4" placeholder="Phone Number" required></div>
               </div>
               <div class="row">
                 <div class="col-md-6">
                   <label for="email">Email:</label>
-                  <input type="email" name="email" id="email" class="form-control mb-4" placeholder="Email"></div>
+                  <input type="email" name="email" id="email" class="form-control mb-4" placeholder="Email" required></div>
                 <div class="col-md-6"></div>
-              </div>
+              </div> -->
 
 
 
@@ -787,21 +811,24 @@
                   <div class="col-md-4">
                     <strong>
                       <h2>Pizza Size</h2>
+                      <h6>(Large: Kshs. 900, Medium: Kshs. 700, Small:Kshs. 500)</h6>
+
                     </strong>
                     <br>
                     <!-- Group of default radios - option 1 -->
                     <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="large" name="size">
+                      <input type="radio" class="custom-control-input" id="large" value="Large" name="size">
                       <label class="custom-control-label" for="large">Large</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="medium" name="size">
+                      <input type="radio" class="custom-control-input" id="medium" value="Medium" name="size">
                       <label class="custom-control-label" for="medium">Medium</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="small" name="size">
+                      <input type="radio" class="custom-control-input" id="small" value="Small" name="size">
                       <label class="custom-control-label" for="small">Small</label>
                     </div>
+                    <br>
 
                   </div>
 
@@ -809,46 +836,48 @@
                   <div class="col-md-4">
                     <strong>
                       <h2>Toppings</h2>
+                      <h6>(Kshs. 75 each)</h6>
+                      <br>
                     </strong>
                     <br>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="pepperoni" id="pepperoni">
+                      <input type="checkbox" class="custom-control-input" value="pepperoni" name="pepperoni" id="pepperoni">
                       <label class="custom-control-label" for="pepperoni">Pepperoni</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="mushrooms" id="mushrooms">
+                      <input type="checkbox" class="custom-control-input" value="mushrooms" name="mushrooms" id="mushrooms">
                       <label class="custom-control-label" for="mushrooms">Mushrooms</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="onions" id="onions">
+                      <input type="checkbox" class="custom-control-input" value="onions" name="onions" id="onions">
                       <label class="custom-control-label" for="onions">Onions</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="sausage" id="sausage">
+                      <input type="checkbox" class="custom-control-input" value="sausage" name="sausage" id="sausage">
                       <label class="custom-control-label" for="sausage">Sausage</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="pineapple" id="pineapple">
+                      <input type="checkbox" class="custom-control-input" value="pineapple" name="pineapple" id="pineapple">
                       <label class="custom-control-label" for="pineapple">Pineapple</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="bacon" id="bacon">
+                      <input type="checkbox" class="custom-control-input" value="bacon" name="bacon" id="bacon">
                       <label class="custom-control-label" for="bacon">Bacon</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="extraCheese" id="extraCheese">
+                      <input type="checkbox" class="custom-control-input" value="extraCheese" name="extraCheese" id="extraCheese">
                       <label class="custom-control-label" for="extraCheese">Extra Cheese</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="blackOlives" id="blackOlives">
+                      <input type="checkbox" class="custom-control-input" value="blackOlives" name="blackOlives" id="blackOlives">
                       <label class="custom-control-label" for="blackOlives">Black Olives</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="greenPeppers" id="greenPeppers">
+                      <input type="checkbox" class="custom-control-input" value="greenPeppers" name="greenPeppers" id="greenPeppers">
                       <label class="custom-control-label" for="greenPeppers">Green Peppers</label>
                     </div>
                     <div class="custom-control custom-checkbox mb-4">
-                      <input type="checkbox" class="custom-control-input" name="spinach" id="spinach">
+                      <input type="checkbox" class="custom-control-input" value="spinach" name="spinach" id="spinach">
                       <label class="custom-control-label" for="spinach">Spinach</label>
                     </div>
 
@@ -857,120 +886,49 @@
                   <div class="col-md-4">
                     <strong>
                       <h2>Crust</h2>
+                      <br>
+                      <br>
                     </strong>
                     <br>
                     <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="thin" name="crust">
+                      <input type="radio" class="custom-control-input" id="thin" value="Thin" name="crust">
                       <label class="custom-control-label" for="thin">Thin</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="thick" name="crust">
+                      <input type="radio" class="custom-control-input" id="thick" value="Thick" name="crust">
                       <label class="custom-control-label" for="thick">Thick</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="gluten" name="crust">
+                      <input type="radio" class="custom-control-input" id="gluten" value="Gluten Free" name="crust">
                       <label class="custom-control-label" for="gluten">Gluten Free</label>
                     </div><div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="flat" name="crust">
+                      <input type="radio" class="custom-control-input" id="flat" value="Flatbread" name="crust">
                       <label class="custom-control-label" for="flat">Flatbread Crust</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="stuffed" name="crust">
+                      <input type="radio" class="custom-control-input" id="stuffed" value="Cheese Stuffed" name="crust">
                       <label class="custom-control-label" for="stuffed">Cheese Stuffed Crust</label>
                     </div>
 
                   </div>
                 </div>
-                <label for="quantity">Quantity</label>
+                <!-- <label for="quantity">Quantity</label>
                 <input type="number" name="quantity" id="quantity" class="form-control mb-4" placeholder="Quantity">
                 <label for="comment">Comments</label>
-                <textarea class="form-control rounded-0" id="comment" name="comment" rows="3" placeholder="Message"></textarea>
+                <textarea class="form-control rounded-0" id="comment" name="comment" rows="3" placeholder="Message"></textarea> -->
                 <br>
-                <button class="btn btn-info btn-block" type="submit">Submit Order</button>
+                <!-- <button class="btn btn-info btn-block" type="submit">Submit Order</button> -->
             </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id="customPizzaButton" >Submit Order</button>
       </div>
     </div>
   </div>
 </div>
+
 <!-- Modal -->
-
-
-
-        </section>
-        <!--Section: Gallery-->
-
-        <hr class="my-5">
-
-        <!--Section: Contact-->
-        <section id="contact">
-          <!--Section: Contact-->
-          <section id="contact">
-
-            <!-- Heading -->
-            <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
-
-            <!--Grid row-->
-            <div class="row">
-
-              <!--Grid column-->
-              <div class="col-lg-8 col-md-12">
-                <!--Grid column-->
-                <div class="col-lg-8 col-md-12">
-                  <!-- Form contact -->
-                  <form class="p-5 grey-text">
-                    <div class="md-form form-sm"> <i class="fas fa-user prefix"></i>
-                      <input type="text" id="form3" class="form-control form-control-sm">
-                      <label for="form3">Your name</label>
-                    </div>
-                    <div class="md-form form-sm"> <i class="fas fa-envelope prefix"></i>
-                      <input type="text" id="form2" class="form-control form-control-sm">
-                      <label for="form2">Your email</label>
-                    </div>
-                    <div class="md-form form-sm"> <i class="fas fa-tag prefix"></i>
-                      <input type="text" id="form32" class="form-control form-control-sm">
-                      <label for="form34">Subject</label>
-                    </div>
-                    <div class="md-form form-sm"> <i class="fas fa-pencil-alt prefix"></i>
-                      <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
-                      <label for="form8">Your message</label>
-                    </div>
-                    <div class="text-center mt-4">
-                      <button class="btn btn-primary">Send <i class="far fa-paper-planeml-1"></i></button>
-                    </div>
-                  </form>
-                  <!-- Form contact -->
-                </div>
-                <!--Grid column-->
-
-
-
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <!-- <div class="col-lg-7 col-md-12"> -->
-                <!--Google map-->
-                <!-- <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
-
-
-
-              </div> -->
-              <!--Grid column-->
-
-            </div>
-            <!--Grid row-->
-
-          </section>
-          <!--Section: Contact-->
-
-
-
-        </section>
-        <!--Section: Contact-->
 
       </div>
     </main>
@@ -1117,14 +1075,14 @@
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <!-- <script type="text/javascript" src="js/popper.min.js"></script> -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- additional -->
 
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
-  <!-- <script type="text/javascript" src="js/mdb.min.js"></script> -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
   <!--Google Maps-->
   <!-- <script src="https://maps.google.com/maps/api/js"></script> -->
