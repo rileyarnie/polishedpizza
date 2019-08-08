@@ -1,24 +1,6 @@
 $(document).ready(function() {
-  // var addToCart = document.getElementsByClassName('pizza-button');
 
-  // for (var i = 0; i < addToCart.length; i++) {
-  //   var button = addToCart[i];
-  //   button.addEventListener('click', function() {
-  //     var button = event.target
-  //     var pizza = button.parentElement.parentElement.parentElement
-  //     var title = pizza.getElementsByClassName('pizza-title')[0].innerText;
-  //     var price = $(".pizza-price option:selected").val();
-  //     console.log(title + " for " + price + " Shillings")
 
-      // function Test() {
-      //   var sels = document.getElementsByClassName('pizza-price');
-      //   for (var zxc0 = 0; zxc0 < sels.length; zxc0++) {
-      //     alert(sels[zxc0].value);
-      //   }
-      // }
-  //
-  //   })
-  // }
 
   veggieButton.addEventListener('click', function(){
     var price = $("#vegeterianPizza").val()
@@ -417,7 +399,7 @@ $(document).ready(function() {
     }
 
 
-    alert( size + ' ' + name + ' for Kshs.' + price + ' added to cart')
+    alert( size + ' ' + name + ' for Kshs. ' + price + ' added to cart')
 
     var table = document.getElementById("myTable");
     var row = table.insertRow(1);
@@ -448,10 +430,119 @@ $(document).ready(function() {
 
  }
 checkout.addEventListener('click' ,function(){
-  alert('Your order has been placed. Thank You for using our service.')
-})
+  var customerName = $("#userName").val()
 
 
+  // if ($("#delivery").val() == "delivery") {
+  //   $(".address").show();
+  //
+  //
+  // }
+
+  if ($("#delivery").val() == "pickUp" && $("#address").val() != "")  {
+    alert("ERROR!! Chosing Pick Up and entering address not allowed.")
+    return
+
+  }
+
+  if ($("#delivery").val() == "delivery" && $("#address").val() == "")  {
+    alert("ERROR!! Please enter delivery address.")
+    return
+
+  }
+
+
+
+
+
+  if ($("#userName").val() == "" || $("#userPhone").val() == "") {
+
+    alert("Please fill in personal details")
+return
+  }
+  if (document.getElementById('total').innerHTML == 0) {
+alert("Nothing in cart, checkout unavailable.")
+  }
+  else {
+    alert('Hello ' + customerName + '. Your order has been placed. Thank You for using our service.')
+    location.reload();
+  }
+
+
+
+
+
+});
+
+
+customPizzaButton.addEventListener('click', function(){
+
+  var name = 'custom'
+  var crust = $("input[name='crust']:checked").val();
+  var size = $("input[name='size']:checked").val();
+  if (size == "Small") {
+    var priceSize = 500;
+      }
+      else if (size == "Medium") {
+        var priceSize = 700;
+
+      }
+      else if (size == "Large") {
+        var priceSize = 900
+
+      }
+      else {
+        return
+      }
+
+      var toppings = function(){
+            var favorite = [];
+            $.each($("input[type='checkbox']:checked"), function(){
+                favorite.push($(this).val());
+            });
+            // alert("My favourite toppings are: " + favorite.join(", "));
+            alert(favorite.length);
+
+
+
+
+
+             return
+
+        };
+
+        var toppingPrice =  document.querySelectorAll('input[type=checkbox]:checked').length
+        var totalTopping = toppingPrice * 75
+
+
+        var price = Number(priceSize + totalTopping);
+
+
+
+alert('Your '+ crust +  ' custom pizza for Kshs. ' + price +  ' has been added to your cart.')
+
+
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  cell1.innerHTML = name;
+  cell2.innerHTML = size;
+  cell3.innerHTML = price;
+
+  totalCost()
+
+
+  return
+
+
+
+
+
+
+
+});
 
 
 
